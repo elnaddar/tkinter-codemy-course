@@ -13,7 +13,10 @@ for number in range(1, 10):
     buttons[number] = hp.number_button(root, number, e, padx=40, pady=20)
 
 buttons[0] = hp.number_button(root, 0, e, padx=40, pady=20)
-buttons["+"] = Button(root, text="+", padx=40, pady=20, command=cm.add_command(e))
+buttons["+"] = Button(root, text="+", padx=40, pady=20, command=cm.operation_command(e, "+"))
+buttons["-"] = Button(root, text="-", padx=40, pady=20, command=cm.operation_command(e, "-"))
+buttons["*"] = Button(root, text="*", padx=40, pady=20, command=cm.operation_command(e, "*"))
+buttons["/"] = Button(root, text="/", padx=40, pady=20, command=cm.operation_command(e, "/"))
 buttons["="] = Button(root, text="=", padx=88, pady=20, command=cm.equal_command(e))
 buttons["clear"] = Button(root, text="clear", padx=75, pady=20, command=cm.clear_field(e))
 
@@ -31,6 +34,10 @@ buttons[0].grid(row=4, column=0)
 buttons["+"].grid(row=5, column=0)
 buttons["="].grid(row=4, column=1, columnspan=2)
 buttons["clear"].grid(row=5, column=1, columnspan=2)
+buttons["-"].grid(row=6, column=0)
+buttons["*"].grid(row=6, column=1)
+buttons["/"].grid(row=6, column=2)
+
 
 
 root.mainloop()
