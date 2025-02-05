@@ -5,6 +5,7 @@ import helpers as hp
 buttons = {}
 
 root = Tk()
+root.title("Simple Calculator")
 
 # ------ Define Widegts
 e = Entry(root, width=35, borderwidth=5)
